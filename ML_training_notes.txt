@@ -1,0 +1,183 @@
+Day1
+mode, median and mean--> The "mean" is the "average" you're used to, where you add up all the numbers and then divide by the number of numbers. The "median" is the "middle" value in the list of numbers. To find the median, your numbers have to be listed in numerical order from smallest to largest, so you may have to rewrite your list before you can find the median. The "mode" is the value that occurs most often. If no number in the list is repeated, then there is no mode for the list.
+deviation and SD formula-->  deviation is the change from the point 
+							 standard squad deviation ---> 
+												eg : sd of vernier calipers =error rate.
+behind python-- C++						
+stages of ML: 
+	breast cancer https://www.kaggle.com/uciml/breast-cancer-wisconsin-data
+	supervised dataset and unsupervised 
+	when u know the outcome -> supervised
+		understand dataset --> https://archive.ics.uci.edu/ml/datasets/Breast+Cancer+Wisconsin+%28Diagnostic%29
+		short and long type are best for usage
+		fragmentation
+		pip freeze--> to list out the versions
+		pip install matplotlib
+		PANDAS --> panal data frame
+			series-->dataframe--> extract panels 
+		pip install seaborn--> for making heat map 
+		List--order matters here , set-order doesn't matter, tuuple->cannot change-immutable
+		deep and shallow copy for pointing 1 to another
+Pandas to learn:-->	https://pandas.pydata.org/pandas-docs/stable/getting_started/10min.html
+numpy--> number theory - matrices multiplication
+slice and dicing --> cut and create cubes
+- Mean when taken as the orign of the graph,
+	draw a circle - and radius is called mean for average.
+	- max tolerance is 43 circles from mean origin.
+	other points outside these 3 circles are called as outlayers.
+	so max is taken as 3 circles around the mean.
+
+Standard scaling --> (x-mu)/sigma
+gaussian bell curve or gaussian distribution or perfect normal curve	
+frequency of curve doesn't change at all
+poisson and exponential distribution
+poisson distribution: house loans are example--> filling points on remaining points 
+strong co relation  
+	
+When we have uncertainty, then we apply machine learning
+Stages:
+1 Data collection
+2 Data cleaning
+3 feature scaling
+4 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Day2 	
+Z score---- to check for out layers
+and also used for adjusting the values
+encoding the data ==> onehotEncoder
+encoding we can do using 2:
+	lambda function
+	label encoder
+import scikit-learn
+split dataset to train and test
+splitting can be done only when the data is more and available
+1 collect the data
+2 80 to 20 is the split in ratio for the test data
+in any of the training ,testing or validating set --> there should not be having any irrelevant data. ex-- human temp 
+data cleaning -- adjust numbers 
+	1 taking avg
+	2 
+Training Dataset: The sample of data used to fit the model.
+Validation Dataset: The sample of data used to provide an unbiased evaluation of a model fit on the training dataset while tuning model hyper parameters. The evaluation becomes more biased as skill on the validation dataset is incorporated into the model configuration.
+Test Dataset: The sample of data used to provide an unbiased evaluation of a final model fit on the training dataset.
+
+CROSS VALIDATION:
+1 except one method
+2 leave p cross validation 
+data points should be more bcoz to plot and find out which algorithm is better
+RMS-- root mean square value
+accuracy--> classification
+precession-->regression algorithms
+mean absolute error(MAE) and mean square error(MSE) are also considered for  regression algorithm 
+learning rate --> changing and learning (can't be too low or too high )
+parameter tuning-->used for varying learning rate 
+algm have time to learn --> adoptive learning 
+if algm has no time to learn, we can choose linear learning
+exponential and logistic are called regression.
+mean squared area is done for regression problem.
+kernel based algorithms
+SVM algorithms --> linear , polynomial 
+linear SVM is different than SVM 
+K SVM 
+2 kinds of manipulations:
+	L1 and L2
+		trust boundary --> is the boundary in which my line travels.
+Scikit documentation
+Over-fitting :running encode.py for LinearSVC
+		C:\ml-1\lib\site-packages\sklearn\svm\base.py:929: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+		"the number of iterations.", ConvergenceWarning)
+		C:\ml-1\lib\site-packages\sklearn\svm\base.py:929: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+		"the number of iterations.", ConvergenceWarning)
+		C:\ml-1\lib\site-packages\sklearn\svm\base.py:929: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+		"the number of iterations.", ConvergenceWarning)
+		C:\ml-1\lib\site-packages\sklearn\svm\base.py:929: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+		"the number of iterations.", ConvergenceWarning)
+		C:\ml-1\lib\site-packages\sklearn\svm\base.py:929: ConvergenceWarning: Liblinear failed to converge, increase the number of iterations.
+		"the number of iterations.", ConvergenceWarning)
+		LinearSCV: 5
+		0.007981061935424805
+		Accuracy: 0.956140350877193
+		Cross_val_Score 0.6341054251635245
+LinearSVC,SVC and cross_validation
+cross_validation: pick random data and do the validation 
+K-MEANS AND K-NEIGHBOUR--
+	 both have same input-- but there is difference output
+	 k-means-- gives u the mean square distance from nearest neighboring point- gives the centroid of the cluster 
+	 k-neighbor- cluster to which the point belongs
+	 centroid--lies at center of dataset
+	 center gives the position of the centroid 
+	 
+	nearest and visited 
+	ask for nearest neighbors and not the mean square distance
+	we can set the clusters 
+
+	KNN algm --> got some error
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Day 3:
+result of trees is always a number
+Random decision trees selects the majority of the output 
+individual --> CART
+when many CART(regression trees)--> ensembels --or  group of forests
+Random forest and svm most popular
+BOOSTING: generating the trees , which are more accurate than the before produced trees
+Boosting is just a method to increase the accuracy, it is different from Random forest classifiers
+	criterion : string, optional (default=”gini”)--> if given this option in RFC , then we are boosting the tree.
+	XgBoost(extreme gradient boosting)--- another method to boost.
+	Bagging---bagged boost trees , it gives the threshold formula and collects the result
+isolated random forest --> let go of most of decisions--- done in risk management and for counting outlayes , this tree can be used
+1 tree represents 1 formula for all the features
+Adaptive boost
+ALG to have known: 
+1. The Levenshtein Algorithm--> distance algm--string distance 
+2. Quicksort algorithm--> tables (select)
+3. unstructured container data --> merge sort
+4  Grid search --> for combinations-- results in true or false  
+5  djikstras algorithm--> weights costs.
+
+Gradient boosting--> greedy algorithm
+		min max algorithms.
+		local minima and local maxima --> acceptable answer than the best 
+		trees to be sorted to avoid complexity
+		Red-black trees--> preferences re given
+		global minima --> always be 1
+	gradient descent--> for the graphs always --> optimization strategy 
+
+Hypothesis:
+	 this is assumption
+	 chi-squared method--> to check the hypothesis is true
+	sampling:
+		equivocal and equivalent
+	Degree of freedom--> (row-1)*(col-1)
+	Chi-squared Matrix--> Christina pic on whatsapp
+PRINCIPLE COMPONENT ANALYSIS(PCA): create new dimensions 
+	They are mostly done on the predictive and exploratory models.(how do human evolve ? )
+	linear regression through origin gives the PC 
+	how do we create principle components-- for 31 variables --> then u can create 30 principle components
+	PCA is used for dropping the dimensions 
+	
+	importance can be divided among PCs as well--> using grid search\
+
+co-variance---
+		importance of 1st variable --> c1/(c1+c2+c3+c4)
+		importance of 2nd  variable --> c2/(c1+c2+c3+c4) and so on..
+
+regularization--> p2=p1+std+regularization Component(RC)--> L1 regularization
+				 p2=p1+std+regularization Component(RC)^2 --> L2 regularization 
+
+Time series analysis:
+constant series 
+moving averages--> taking the average on latest data set 
+	rolling averages-->  takes the windows(raw1+raw2+raw3+raw4...)/n_windows
+	taking avg of last three dates
+	breaking down the graph 4 parts ->
+										everything up
+										trending 
+										seasonal
+										moving averages
+										residue
+							business problem--> Holt winters
+												when we add integrated seasons and moving averages --> Holt winters becomes --> ARIMA
+												A-auto regression-residue
+												I-integration/seasonal
+												MA-moving averages 
+	

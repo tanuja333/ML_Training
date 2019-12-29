@@ -1,0 +1,135 @@
+irbaz.khan1@emc.com 
+QWErty!@#456
+https://dellemc.lms.simplilearn.com/dashboard
+=============================================================================13th nov===============================================================================
+Links referred:
+	https://thispersondoesnotexist.com/
+	https://towardsdatascience.com/understanding-the-mathematics-behind-gradient-descent-dde5dc9be06e
+	https://medium.com/datadriveninvestor/overview-of-different-optimizers-for-neural-networks-e0ed119440c3
+	http://yann.lecun.com/exdb/mnist/ 
+vgg network
+difference btw classic ML and DL
+ML --> 
+	broad classification as linear, non-linear or polynomialetc..
+	just building algm.
+DL-->
+	no need to tell about difference between i/p and o/p.It will be learnt bt itself.
+	it emulates human brain.
+
+L--level of intelligence
+L1-descriptive analytics
+L2-predictive analytics
+L3-perspective analytics --> wht u can do to improv the prediction.
+
+steps to follow:
+	Business use case
+	Objectives
+	Data sufficiency
+	Data exploration analysis(EDA)
+	select model
+	Evaluate model
+	Hyper tuning
+	Model tuning
+logarithm is reverse of powers
+
+*check for good information in given data:--> entropy check is borrowed from shannon's theorm.
+	check for entropy : log2base(N) where N no of outcomes
+	entropy of dataset: Summation of i {- (Pi)(log2base)(Pi)} to N
+			    N - number of outcomes.
+	calculate entropy for each column to calculate the amount of information contained in each column and to get significance of each column.
+	weighted entropy should be taken 
+
+we need to get final value of entropy --> but we don't get it when we add each entropy of column.
+Orthogonal features --> i/p data which doesn't have overlaps.
+when we add up entropy of each column , we need not get same value as entire entropy , it will b more than entire entropy--> because of unorthogonal features
+	unorthogonal features--> which are overlaping as age and date of birth 
+most of the ML algorithms assums that there are no unorthogonal features in the input and all input are independent of each others
+We use PCA -> principle componenet analysis for gettng the importance of each feature and unorthogonal of the features.
+----------------------------------------------------
+machine learns in 3 ways --> supervised learning(rule based learning), unsupervised learning(learn from pattern) and reinforcement learning(learn from feedback).
+prediction can be done on 2 data --> 
+	continuous --> infinite num of values
+	and discrete data --> finite num of values
+based on output variable we can classify algm --> 
+	o/p var is continuous --> regression(share price, loan , salary etc..)
+	o/p var is discrete--> classification( loan approval , spam /ham, gender, exam results, fraud/non fraud etc..)
+	we can also have combination of both --> whether loan is approved or not(classification) and how much amount is approved (regression)
+------------------------------------------------------
+Maths velocity --> rate of change of 1 variable wrt another var:
+	dv/dt= {v(t+E)-v(t-E)}/2E  where E - epsilon-- differential 
+-------------------------------------------------------
+python basics :
+difference between mutable and immutable:
+mutable : lists, dic, user def types.- no deep copy --> copy by reference
+immutable: everything else(int, float etc..) is immutable --> copy by value
+: slice opereator
+array can be used using numpy operations--> numeric array
+tuple executes faster than the list 
+you can convert tuple tolist and list to tuple
+--------------------------------------------------------
+random normal distribution or bell cure :perfect RD = mean=mode=median
+mode--> highest frequency valu.
+median --> sorted middle value.
+mean--> average of numbers
+central tendency is measured by these 3 methods
+standard deviation and varince
+SD --> how much is your point away from the mean of ur curve.
+we use square function in SD, bcoz we need to penalize larger deviation. --> more u are away from mean , more the penalise.
+higher the SD , more the spread of data.--> sharper bell.
+low SD --> flat bell 
+by knowing only mean and SD --> u can drw a bell curve.
+----------------------------------------------------------
+ML models :
+linear model --> y=mx+c , m --slope
+how to minimise the error in linear regression
+===========================================================================14th nov===========================================================================
+1 Sample exersice
+2 minimise the errors --> gardient descent -->https://towardsdatascience.com/understanding-the-mathematics-behind-gradient-descent-dde5dc9be06e
+					    https://mccormickml.com/2014/03/04/gradient-descent-derivation/
+	types of err --> sse, mse,rmse
+	strenght of model --> SSR- adjecent sum of square errors
+				R squared co-efficient 
+				err rate
+2 feature engineering polynomial engineering
+3 AI and perception --> neuron
+4 errors in Nureal network
+5 Gradient descent types --> https://medium.com/datadriveninvestor/overview-of-different-optimizers-for-neural-networks-e0ed119440c3
+	wrttien example in oneNote notes pictures 
+	stochastic gradient descent
+6 formation of percepton or neuron in program
+Neural network--> classification_ problem -> MLP - multi layer percepton(fully connected network)
+		i/p layer --> hidden layer--> o/p layer
+===========================================================================15th nov===========================================================================
+1 unsupervised learning
+	--> no output is given for prediction.
+	--> customer segmentation is example of classis unsupervised learning
+	--> clustering is used in this technique.
+2 K-Means clustering -> algorithm , is maturing when the centroids are not moving 
+			another measurement in taht all the data points assignment to the clusters remain same .
+			SSE of the dataset will be coming down and reduces marginally only.--> so SSE wil be low
+3 corelation between points: using pandas library --> supervised learing
+		where ever there is high corelation , you need to take only one of the coulmn for consideration
+	in supervisd learning there should be corelation between i/p and o/p column.
+	but in unsupervised learning --> corelation between 2 i/p columns are checked 
+4 simple exercise on flower petal
+5 bimodel data--> data having 2 peaks called as bimodel data
+		it has 2 places where it has high frequency
+6 standard scaling --> convert mean to 0 and standard deviation to 1.
+		standard scaling is done for keeping sum prodduct in very small range.
+		sigmoid function is sensitive at small range 0 to 1
+		and converting between -3 and +3 
+7 logistic regression--> linear regression + sigmoid function = logistic regression
+			(m1x1+m2X2+m3X3+c):s----> i/(1+e^-(s))----> o/p value { sum -> sigmoid= o/p }
+8 c value in logistic regression --> residual of err left in regression value, hence at every iteration we leave c value as residual err during regression 
+9 calculate the overfitting or less fiting of a model --> litmus test is graph between test and train in a graph ->track ur tainings allong with it .
+		models to check overfitting --> NLP --> transform models --> MFit, ELM and BERT
+					    --> LSTM --> attention LSTM
+					    --> Drop out, Batch normalisation, gradient clipping 
+10 Time series data --> Auto correlation -- strong correlation b/w previous time step data and current time step data.
+			current values are function of past values , then only we called time series data
+			Yt=f(yt-1,yt-2.....)
+			ex: share price data, monitoring load on server data, and time series pattern in sales data. GDP is a trend.
+			Test to know whether our data is time series or not 
+			ARIMA MODEL--> Auto regressive integrated moving average model
+`			To see whether a data is time sries or not --> we do AD Fuller test
+		Auto Arima --> to find optimal value by itself and give best values of p, d and q
